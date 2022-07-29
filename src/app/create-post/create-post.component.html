@@ -1,0 +1,18 @@
+<p>create-post works!</p>
+
+<!-- Create a new post -->
+<form (submit)="onSubmit()">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" name="title" [(ngModel)]="newPost.title" placeholder="Title">
+  </div>
+  <div class="form-group">
+    <label for="body">Body</label>
+    <input type="text" class="form-control" id="body" name="body" placeholder="Body" [(ngModel)]="newPost.content">
+  </div>
+  <div class="form-group">
+    <label for="author">Author</label>
+    <input type="text" class="form-control" id="author" name="author" [(ngModel)]="newPost.author" placeholder="Author">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

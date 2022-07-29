@@ -14,4 +14,8 @@ export class TransactionService {
   public getAllPosts(): Observable<Post[]> {
     return this.httpClient.get<Post[]>(this.baseUrl + 'posts');
   }
+
+  public createPost(post: Post): Observable<Post> {
+    return this.httpClient.post<Post>(this.baseUrl + 'posts/create', post);
+  }
 }

@@ -10,7 +10,7 @@ import { TransactionService } from '../transaction.service';
 export class HomeComponent implements OnInit {
 
   public posts: Post[] = [];
-  public comments: Comment[] = [];
+
   constructor(private transactionService: TransactionService) { }
 
   ngOnInit(): void {
