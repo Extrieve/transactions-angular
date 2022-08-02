@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Post } from '../models/post.Post';
 import { TransactionService } from '../transaction.service';
@@ -12,7 +13,10 @@ export class CreatePostComponent implements OnInit {
 
   public newPost: Post = new Post();
 
-  constructor(private transactionService: TransactionService, private router: Router) { }
+  commentsForm = FormGroup;
+
+  constructor(private transactionService: TransactionService, private router: Router, private formBuilder: FormBuilder) {
+  }
 
   ngOnInit(): void {
   }
@@ -22,6 +26,10 @@ export class CreatePostComponent implements OnInit {
       this.newPost = data;
     }
     , error => console.log(error));
+  }
+
+  public addCommentComponent() {
+
   }
 
   public getAllPosts() {
